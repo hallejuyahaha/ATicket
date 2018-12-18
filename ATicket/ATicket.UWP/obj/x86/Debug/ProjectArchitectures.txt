@@ -1,0 +1,1 @@
+F:\Project\ATicket\ATicket\ATicket.UWP\ATicket.UWP.csproj;x86

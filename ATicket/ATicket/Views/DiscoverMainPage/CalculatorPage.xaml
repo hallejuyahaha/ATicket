@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ATicket.Views.DiscoverMainPage.CalculatorPage"
+             Title="计算器">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing" Value="2" />
+                <Setter Property="ColumnSpacing" Value="2" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderColor" Value="Black" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid Margin="5">
+
+        <Grid x:Name="portrait">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- X and Y Stack Values -->
+            <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+                   Padding="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="X = " 
+                           Grid.Row="0" Grid.Column="0" />
+
+                    <Label Text="{Binding X}"
+                           Grid.Row="0" Grid.Column="1" />
+
+                    <Label Text="运算符 " 
+                           Grid.Row="1" Grid.Column="0" />
+
+                    <Label Text="{Binding Cal}"
+                           Grid.Row="1" Grid.Column="1" />
+
+                    <Label Text="Y = " 
+                           Grid.Row="2" Grid.Column="0" />
+
+                    <Label Text="{Binding Y}"
+                           Grid.Row="2" Grid.Column="1" />
+
+                    <Label Text="结果 " 
+                           Grid.Row="3" Grid.Column="0" />
+
+                    <Label Text="{Binding Result}"
+                           Grid.Row="3" Grid.Column="1" />
+                </Grid>
+            </Frame>
+
+            <!--<Grid  Margin="5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="X = " 
+                           Grid.Row="0" Grid.Column="0" />
+
+                    <Label Text="{Binding X}"
+                           Grid.Row="1" Grid.Column="0" />
+                    
+                    <Label Text="运算" 
+                           Grid.Row="0" Grid.Column="1" />
+
+                    <Label Text="{Binding cal}"
+                           Grid.Row="1" Grid.Column="1" />
+
+                    <Label Text="Y = " 
+                           Grid.Row="0" Grid.Column="2" />
+
+                    <Label Text="{Binding Y}"
+                           Grid.Row="1" Grid.Column="2" />
+                    <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Padding="0">
+                        <Label Text="{Binding Result, Mode=TwoWay}" FontSize="Large" />
+                    </Frame>
+            </Grid>-->
+
+
+
+            <!--数字键-->
+            <Button Text="1"
+                    Grid.Row="1" Grid.Column="0" 
+                    Command="{Binding DigitCommand}" 
+                    CommandParameter="1" />
+
+            <Button Text="2" 
+                    Grid.Row="1" Grid.Column="1"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="2" />
+
+            <Button Text="3" 
+                    Grid.Row="1" Grid.Column="2"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="3" />
+
+            <Button Text="4" 
+                    Grid.Row="2" Grid.Column="0"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="4" />
+
+            <Button Text="5" 
+                    Grid.Row="2" Grid.Column="1"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="5" />
+
+            <Button Text="6" 
+                    Grid.Row="2" Grid.Column="2"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="6" />
+
+            <Button Text="7" 
+                    Grid.Row="3" Grid.Column="0"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="7" />
+
+            <Button Text="8" 
+                    Grid.Row="3" Grid.Column="1"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="8" />
+
+            <Button Text="9" 
+                    Grid.Row="3" Grid.Column="2"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="9" />
+
+            <Button Text="0" 
+                    Grid.Row="4" Grid.Column="2"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="0" />
+
+            <!--<Button Text="." 
+                    Grid.Row="4" Grid.Column="0"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="." />-->
+
+            <!--功能键-->
+            <Button Text="+" 
+                    Grid.Row="1" Grid.Column="3" 
+                    x:Name="add"
+                    Command="{Binding FunctionCommand}"
+                    CommandParameter="+" />
+
+            <Button Text="-" 
+                    Grid.Row="2" Grid.Column="3"
+                    x:Name="subtract"
+                    Command="{Binding FunctionCommand}"
+                    CommandParameter="-" />
+
+            <Button Text="*" 
+                    Grid.Row="3" Grid.Column="3"
+                    x:Name="multiply"
+                    Command="{Binding FunctionCommand}"
+                    CommandParameter="*"/>
+
+            <Button Text="/" 
+                    Grid.Row="4" Grid.Column="3"
+                    x:Name="divide"
+                    Command="{Binding FunctionCommand}"
+                    CommandParameter="/" />
+
+            <Button Text="C" 
+                    Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+                    Command="{Binding ClearCommand}"
+                    CommandParameter="clear" />
+
+            <Button Text="ENTER" 
+                    Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4"
+                    Command="{Binding EnterCommand}" />
+        </Grid>
+    </Grid>
+</ContentPage>

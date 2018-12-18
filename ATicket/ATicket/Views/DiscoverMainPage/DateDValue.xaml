@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             x:Class="ATicket.Views.DiscoverMainPage.DateDValue">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <!--<Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />-->
+            <Label Text="计算两个日期差几天"
+               Style="{DynamicResource TitleStyle}"
+               Margin="0, 20"
+               HorizontalTextAlignment="Center" />
+
+            <Label Text="开始日期:" />
+
+            <DatePicker x:Name="startDatePicker"
+                    Format="D"
+                    Margin="30, 0, 0, 30"
+                    DateSelected="OnDateSelected" />
+
+            <Label Text="结束日期:" />
+
+            <DatePicker x:Name="endDatePicker"
+                    Format="D"
+                    MinimumDate="{Binding Source={x:Reference startDatePicker},Path=Date}"
+                    Margin="30, 0, 0, 30"
+                    DateSelected="OnDateSelected" />
+
+            <Label  
+                   x:Name="Result"
+                   Margin="0, 20"
+                   HorizontalTextAlignment="Center"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
