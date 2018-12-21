@@ -299,3 +299,6 @@ F:\Project\ATicket\ATicket\ATicket.UWP\obj\x86\Debug\qualifiers.txt.intermediate
 F:\Project\ATicket\ATicket\ATicket.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 F:\Project\ATicket\ATicket\ATicket.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 F:\Project\ATicket\ATicket\ATicket.UWP\obj\x86\Debug\ProjectArchitectures.txt
+F:\Ticket\ATicket\ATicket.UWP\obj\x86\Debug\ATicket.UWP.csprojAssemblyReference.cache
+F:\Ticket\ATicket\ATicket.UWP\obj\x86\Debug\ATicket.UWP.exe
+F:\Ticket\ATicket\ATicket.UWP\obj\x86\Debug\ATicket.UWP.pdb

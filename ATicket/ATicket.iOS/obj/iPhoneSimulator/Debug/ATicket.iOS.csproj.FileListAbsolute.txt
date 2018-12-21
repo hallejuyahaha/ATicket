@@ -56,3 +56,13 @@ F:\Project\ATicket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\XamlC.stamp
 F:\Project\ATicket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\ATicket.iOS.csproj.CopyComplete
 F:\Project\ATicket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\ATicket.iOS.exe
 F:\Project\ATicket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\ATicket.iOS.pdb
+F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\optimized\
+F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\ATicket.iOS.csprojAssemblyReference.cache
+F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\ATicket.iOS.csproj.CoreCompileInputs.cache
+F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\ATicket.iOS.exe
+F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\ATicket.iOS.pdb

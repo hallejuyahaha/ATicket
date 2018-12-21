@@ -20,7 +20,7 @@ namespace ATicket.Views.DiscoverMainPage
             BindingContext = viewModel = new DateDValueModel();
         }
 
-        void OnDateSelected()
+        void OnDateSelected(object sender, DateChangedEventArgs e)
         {
             string r = "";
             TimeSpan timeSpan = endDatePicker.Date - startDatePicker.Date;
@@ -39,11 +39,6 @@ namespace ATicket.Views.DiscoverMainPage
             r += "其中有 " + weekend.Days + " 天是周末";
 
             Result.Text = String.Format(r);
-        }
-
-        private void OnDateSelected(object sender, DateChangedEventArgs e)
-        {
-
         }
     }
 }

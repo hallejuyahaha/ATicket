@@ -9,3 +9,14 @@ F:\Project\ATicket\ATicket\ATicket.MobileAppService\obj\Debug\netcoreapp2.0\ATic
 F:\Project\ATicket\ATicket\ATicket.MobileAppService\obj\Debug\netcoreapp2.0\ATicket.MobileAppService.AssemblyInfo.cs
 F:\Project\ATicket\ATicket\ATicket.MobileAppService\obj\Debug\netcoreapp2.0\ATicket.MobileAppService.dll
 F:\Project\ATicket\ATicket\ATicket.MobileAppService\obj\Debug\netcoreapp2.0\ATicket.MobileAppService.pdb
+F:\Ticket\ATicket\ATicket.MobileAppService\bin\Debug\netcoreapp2.0\ATicket.MobileAppService.deps.json
+F:\Ticket\ATicket\ATicket.MobileAppService\bin\Debug\netcoreapp2.0\ATicket.MobileAppService.runtimeconfig.json
+F:\Ticket\ATicket\ATicket.MobileAppService\bin\Debug\netcoreapp2.0\ATicket.MobileAppService.runtimeconfig.dev.json
+F:\Ticket\ATicket\ATicket.MobileAppService\bin\Debug\netcoreapp2.0\ATicket.MobileAppService.dll
+F:\Ticket\ATicket\ATicket.MobileAppService\bin\Debug\netcoreapp2.0\ATicket.MobileAppService.pdb
+F:\Ticket\ATicket\ATicket.MobileAppService\obj\Debug\netcoreapp2.0\ATicket.MobileAppService.csprojAssemblyReference.cache
+F:\Ticket\ATicket\ATicket.MobileAppService\obj\Debug\netcoreapp2.0\ATicket.MobileAppService.csproj.CoreCompileInputs.cache
+F:\Ticket\ATicket\ATicket.MobileAppService\obj\Debug\netcoreapp2.0\ATicket.MobileAppService.AssemblyInfoInputs.cache
+F:\Ticket\ATicket\ATicket.MobileAppService\obj\Debug\netcoreapp2.0\ATicket.MobileAppService.AssemblyInfo.cs
+F:\Ticket\ATicket\ATicket.MobileAppService\obj\Debug\netcoreapp2.0\ATicket.MobileAppService.dll
+F:\Ticket\ATicket\ATicket.MobileAppService\obj\Debug\netcoreapp2.0\ATicket.MobileAppService.pdb
