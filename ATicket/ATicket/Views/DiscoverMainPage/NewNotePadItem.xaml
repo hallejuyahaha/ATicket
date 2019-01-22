@@ -15,7 +15,7 @@
             
             <Label Text="时间" FontSize="Medium" />
 
-            <DatePicker x:Name="DatePicker"
+            <DatePicker x:Name="DatePicker" Date="{Binding Time}"
                     Format="D"
                     Margin="30, 0, 0, 30" />
             

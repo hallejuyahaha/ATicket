@@ -20,6 +20,9 @@ namespace ATicket.Views.DiscoverMainPage
         {
             //添加
             InitializeComponent();
+            NotePadItems NewItem = new NotePadItems() { Content=null, NTitle=null, Time = DateTime.Now };
+            Item = NewItem;
+            BindingContext = Item;
         }
         public NewNotePadItem(NotePadItems NewItem)
         {

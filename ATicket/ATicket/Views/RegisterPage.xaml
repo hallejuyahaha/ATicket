@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ATicket.Views.RegisterPage"
+             Title="注册">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="注册页面"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="账号" FontSize="Medium" />
+            <Entry Placeholder="请填写账号"  x:Name="userName" FontSize="Default" />
+            <Label Text="密码" FontSize="Medium" />
+            <Entry Placeholder="请填写密码"  x:Name="passWord" FontSize="Large"  IsPassword="True"/>
+            <Label Text="确认密码" FontSize="Medium" />
+            <Entry Placeholder="请填写密码"  x:Name="passWordAgin" FontSize="Large"  IsPassword="True"/>
+            <Label Text="邮箱" FontSize="Medium" />
+            <Entry Placeholder="请填写账号"  x:Name="Email" FontSize="Default" />
+            <Label Text="手机号" FontSize="Medium" />
+            <Entry Placeholder="请填写账号"  x:Name="phoneNumber" FontSize="Default" />
+            <Label Text="昵称" FontSize="Medium" />
+            <Entry Placeholder="请填写账号"  x:Name="accountName" FontSize="Default" />
+
+            <Button Text="注册"  Clicked="Register_Click" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

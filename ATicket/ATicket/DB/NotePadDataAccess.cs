@@ -54,7 +54,17 @@ namespace ATicket.DB
                 return query.AsEnumerable();
             }
         }
-
+        public IEnumerable<NotePadItems> GetdNotePadItemsByTime(DateTime start, DateTime end)
+        {
+            // 锁定数据库，以防冲突
+            lock (collisionLock)
+            {
+                var query = from aa in database.Table<NotePadItems>()
+                            where aa.Time>start && aa.Time < end
+                            select aa;
+                return query.AsEnumerable();
+            }
+        }
         //使用sql语句查询
         public IEnumerable<NotePadItems> GetFilteredNotePadItemsAll()
         {

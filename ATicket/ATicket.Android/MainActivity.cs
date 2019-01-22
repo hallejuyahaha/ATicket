@@ -14,7 +14,10 @@ namespace ATicket.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
-        {           
+        {
+
+            //webhost.Service1 service1 = new webhost.Service1();
+            //var at = service1.GetShow();
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

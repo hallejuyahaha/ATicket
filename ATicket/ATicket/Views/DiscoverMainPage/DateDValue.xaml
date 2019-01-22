@@ -1,38 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="{Binding Title}"
+             Title="日期差"
              x:Class="ATicket.Views.DiscoverMainPage.DateDValue">
-    <ContentPage.Content>
-        <StackLayout Margin="10">
-            <!--<Label Text="Welcome to Xamarin.Forms!"
+  <ContentPage.Content>
+    <StackLayout Margin="10">
+      <!--<Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />-->
-            <Label Text="计算两个日期差几天"
-               Style="{DynamicResource TitleStyle}"
-               Margin="0, 20"
-               HorizontalTextAlignment="Center" />
+      <Label Text="计算两个日期差几天"
+         Style="{DynamicResource TitleStyle}"
+         Margin="0, 20"
+         HorizontalTextAlignment="Center" />
 
-            <Label Text="开始日期:" />
+      <Label Text="开始日期:" />
 
-            <DatePicker x:Name="startDatePicker"
-                    Format="D"
-                    Margin="30, 0, 0, 30"
-                    DateSelected="OnDateSelected" />
+      <DatePicker x:Name="startDatePicker"
+              Format="D"
+              Margin="30, 0, 0, 30"
+              DateSelected="OnDateSelected" />
 
-            <Label Text="结束日期:" />
+      <Label Text="结束日期:" />
 
-            <DatePicker x:Name="endDatePicker"
-                    Format="D"
-                    MinimumDate="{Binding Source={x:Reference startDatePicker},Path=Date}"
-                    Margin="30, 0, 0, 30"
-                    DateSelected="OnDateSelected" />
+      <DatePicker x:Name="endDatePicker"
+              Format="D"
+              MinimumDate="{Binding Source={x:Reference startDatePicker},Path=Date}"
+              Margin="30, 0, 0, 30"
+              DateSelected="OnDateSelected" />
 
-            <Label  
-                   x:Name="Result"
-                   Margin="0, 20"
-                   HorizontalTextAlignment="Center"/>
+      <Label x:Name="Result"
+             Margin="0, 20"
+             HorizontalTextAlignment="Center"/>
 
-        </StackLayout>
-    </ContentPage.Content>
+      <ListView x:Name="ItemsListView"
+                ItemsSource="{Binding ListItems}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"                 
+                ItemSelected="OnItemSelected">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.ContextActions>
+                <!--<MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="删除"/>-->
+              </ViewCell.ContextActions>
+              <StackLayout Padding="10">
+                <Label Text="{Binding NTitle}"       
+                       LineBreakMode="NoWrap"       
+                       Style="{DynamicResource ListItemTextStyle}"
+                       FontSize="16" />
+                <Label Text="{Binding Content}"
+                       LineBreakMode="NoWrap"
+                       Style="{DynamicResource ListItemDetailTextStyle}"
+                       FontSize="13" />
+                <Label Text="{Binding Time}"
+                       LineBreakMode="NoWrap"
+                       Style="{DynamicResource ListItemDetailTextStyle}"
+                       FontSize="10" />
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

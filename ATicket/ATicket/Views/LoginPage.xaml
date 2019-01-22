@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ATicket.Views.LoginPage"
+             Title="登陆">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="账号" FontSize="Medium" />
+            <Entry Placeholder="请填写账号"  x:Name="username" FontSize="Default" />
+            <Label Text="密码" FontSize="Medium" />
+            <Entry Placeholder="请填写密码"  x:Name="password" FontSize="Large"  IsPassword="True"/>
+            <Button Text="登陆"  Clicked="Login"></Button>
+            <Button Text="注册"  Clicked="Register"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

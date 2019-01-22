@@ -20,18 +20,10 @@ namespace ATicket.ViewModels
             Title = "NotaPad";
             Items = new ObservableCollection<NotePadItems>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());//load item方法
-            //ExecuteLoadItemsCommand();
         }
 
         private async Task ExecuteLoadItemsCommand()
         {
-            //this.dataAccess = new NotePadDataAccess();
-            //Items = new ObservableCollection<NotePadItems>();
-            //IEnumerable<NotePadItems> temp = dataAccess.GetdNotePadItemsAll();
-            //foreach (NotePadItems a in temp)
-            //{
-            //    Items.Add(a);
-            //}
             if (IsBusy)
                 return;
 
