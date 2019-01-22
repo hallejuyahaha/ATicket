@@ -21,18 +21,22 @@ namespace ATicket.Views
 
             BindingContext = viewModel = new DiscoverViewModel();
         }
-        async void ShowNotepadPage(object sender, EventArgs e)
+        private async void ShowNotepadPage(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new NotePadPage()));
         }
-        async void ShowCalculatorPage(object sender, EventArgs e)
+        private async void ShowCalculatorPage(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new CalculatorPage()));
         }
-        async void DateDValue(object sender, EventArgs e)
+        private async void DateDValue(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new DateDValue()));
         }
-        
+
+        private async void Monitor(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new MonitorPage()));
+        }
     }
 }

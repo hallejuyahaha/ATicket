@@ -74,7 +74,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Web References\webhost\Reference.cs">
+    <Compile Include="Web References\WebReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -84,27 +84,30 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Web References\webhost\CompositeType.datasource">
+    <None Include="Web References\WebReference\CompositeType.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\webhost\Reference.map">
+    <None Include="Web References\WebReference\monitor.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebReference\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\webhost\Service1.wsdl" />
-    <None Include="Web References\webhost\Service1.xsd">
+    <None Include="Web References\WebReference\Service1.wsdl" />
+    <None Include="Web References\WebReference\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\webhost\Service10.xsd">
+    <None Include="Web References\WebReference\Service10.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\webhost\Service11.xsd">
+    <None Include="Web References\WebReference\Service11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\webhost\Service12.xsd">
+    <None Include="Web References\WebReference\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\webhost\showstarts.datasource">
+    <None Include="Web References\WebReference\showstarts.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
   </ItemGroup>
@@ -143,10 +146,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:8000/Service1.svc">
+    <WebReferenceUrl Include="http://192.168.1.2:8000/Service1.svc">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\webhost\</RelPath>
-      <UpdateFromURL>http://localhost:8000/Service1.svc</UpdateFromURL>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>http://192.168.1.2:8000/Service1.svc</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -158,7 +161,7 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web References\webhost\Service1.disco" />
+    <None Include="Web References\WebReference\Service1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

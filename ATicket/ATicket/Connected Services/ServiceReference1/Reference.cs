@@ -36,6 +36,12 @@ namespace ServiceReference1
 
         private System.Threading.SendOrPostCallback RegisterOperationCompleted;
 
+        private System.Threading.SendOrPostCallback GetMonitorsOperationCompleted;
+
+        private System.Threading.SendOrPostCallback AddMonitorsOperationCompleted;
+
+        private System.Threading.SendOrPostCallback DeleteMonitorsOperationCompleted;
+
         private bool useDefaultCredentialsSetExplicitly;
 
         /// <remarks/>
@@ -98,6 +104,15 @@ namespace ServiceReference1
 
         /// <remarks/>
         public event RegisterCompletedEventHandler RegisterCompleted;
+
+        /// <remarks/>
+        public event GetMonitorsCompletedEventHandler GetMonitorsCompleted;
+
+        /// <remarks/>
+        public event AddMonitorsCompletedEventHandler AddMonitorsCompleted;
+
+        /// <remarks/>
+        public event DeleteMonitorsCompletedEventHandler DeleteMonitorsCompleted;
 
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace = "http://tempuri.org/", ResponseNamespace = "http://tempuri.org/", Use = System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle = System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -293,6 +308,115 @@ namespace ServiceReference1
         }
 
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetMonitors", RequestNamespace = "http://tempuri.org/", ResponseNamespace = "http://tempuri.org/", Use = System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle = System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable = true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace = "http://schemas.datacontract.org/2004/07/ShowStart.Model")]
+        public monitor[] GetMonitors([System.Xml.Serialization.XmlElementAttribute(IsNullable = true)] string username)
+        {
+            object[] results = this.Invoke("GetMonitors", new object[] {
+                        username});
+            return ((monitor[])(results[0]));
+        }
+
+        /// <remarks/>
+        public void GetMonitorsAsync(string username)
+        {
+            this.GetMonitorsAsync(username, null);
+        }
+
+        /// <remarks/>
+        public void GetMonitorsAsync(string username, object userState)
+        {
+            if ((this.GetMonitorsOperationCompleted == null))
+            {
+                this.GetMonitorsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetMonitorsOperationCompleted);
+            }
+            this.InvokeAsync("GetMonitors", new object[] {
+                        username}, this.GetMonitorsOperationCompleted, userState);
+        }
+
+        private void OnGetMonitorsOperationCompleted(object arg)
+        {
+            if ((this.GetMonitorsCompleted != null))
+            {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetMonitorsCompleted(this, new GetMonitorsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddMonitors", RequestNamespace = "http://tempuri.org/", ResponseNamespace = "http://tempuri.org/", Use = System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle = System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void AddMonitors([System.Xml.Serialization.XmlElementAttribute(IsNullable = true)] monitor monitor, out bool AddMonitorsResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddMonitorsResultSpecified)
+        {
+            object[] results = this.Invoke("AddMonitors", new object[] {
+                        monitor});
+            AddMonitorsResult = ((bool)(results[0]));
+            AddMonitorsResultSpecified = ((bool)(results[1]));
+        }
+
+        /// <remarks/>
+        public void AddMonitorsAsync(monitor monitor)
+        {
+            this.AddMonitorsAsync(monitor, null);
+        }
+
+        /// <remarks/>
+        public void AddMonitorsAsync(monitor monitor, object userState)
+        {
+            if ((this.AddMonitorsOperationCompleted == null))
+            {
+                this.AddMonitorsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddMonitorsOperationCompleted);
+            }
+            this.InvokeAsync("AddMonitors", new object[] {
+                        monitor}, this.AddMonitorsOperationCompleted, userState);
+        }
+
+        private void OnAddMonitorsOperationCompleted(object arg)
+        {
+            if ((this.AddMonitorsCompleted != null))
+            {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AddMonitorsCompleted(this, new AddMonitorsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/DeleteMonitors", RequestNamespace = "http://tempuri.org/", ResponseNamespace = "http://tempuri.org/", Use = System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle = System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void DeleteMonitors([System.Xml.Serialization.XmlElementAttribute(IsNullable = true)] monitor monitor, out bool DeleteMonitorsResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DeleteMonitorsResultSpecified)
+        {
+            object[] results = this.Invoke("DeleteMonitors", new object[] {
+                        monitor});
+            DeleteMonitorsResult = ((bool)(results[0]));
+            DeleteMonitorsResultSpecified = ((bool)(results[1]));
+        }
+
+        /// <remarks/>
+        public void DeleteMonitorsAsync(monitor monitor)
+        {
+            this.DeleteMonitorsAsync(monitor, null);
+        }
+
+        /// <remarks/>
+        public void DeleteMonitorsAsync(monitor monitor, object userState)
+        {
+            if ((this.DeleteMonitorsOperationCompleted == null))
+            {
+                this.DeleteMonitorsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteMonitorsOperationCompleted);
+            }
+            this.InvokeAsync("DeleteMonitors", new object[] {
+                        monitor}, this.DeleteMonitorsOperationCompleted, userState);
+        }
+
+        private void OnDeleteMonitorsOperationCompleted(object arg)
+        {
+            if ((this.DeleteMonitorsCompleted != null))
+            {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeleteMonitorsCompleted(this, new DeleteMonitorsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+
+        /// <remarks/>
         public new void CancelAsync(object userState)
         {
             base.CancelAsync(userState);
@@ -368,6 +492,79 @@ namespace ServiceReference1
             set
             {
                 this.stringValueField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://schemas.datacontract.org/2004/07/ShowStart.Model")]
+    public partial class monitor
+    {
+
+        private string actorField;
+
+        private long idField;
+
+        private bool idFieldSpecified;
+
+        private string usernameField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true)]
+        public string actor
+        {
+            get
+            {
+                return this.actorField;
+            }
+            set
+            {
+                this.actorField = value;
+            }
+        }
+
+        /// <remarks/>
+        public long id
+        {
+            get
+            {
+                return this.idField;
+            }
+            set
+            {
+                this.idField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idSpecified
+        {
+            get
+            {
+                return this.idFieldSpecified;
+            }
+            set
+            {
+                this.idFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true)]
+        public string username
+        {
+            get
+            {
+                return this.usernameField;
+            }
+            set
+            {
+                this.usernameField = value;
             }
         }
     }
@@ -735,6 +932,116 @@ namespace ServiceReference1
 
         /// <remarks/>
         public bool RegisterResultSpecified
+        {
+            get
+            {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GetMonitorsCompletedEventHandler(object sender, GetMonitorsCompletedEventArgs e);
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetMonitorsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    {
+
+        private object[] results;
+
+        internal GetMonitorsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+        {
+            this.results = results;
+        }
+
+        /// <remarks/>
+        public monitor[] Result
+        {
+            get
+            {
+                this.RaiseExceptionIfNecessary();
+                return ((monitor[])(this.results[0]));
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void AddMonitorsCompletedEventHandler(object sender, AddMonitorsCompletedEventArgs e);
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AddMonitorsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    {
+
+        private object[] results;
+
+        internal AddMonitorsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+        {
+            this.results = results;
+        }
+
+        /// <remarks/>
+        public bool AddMonitorsResult
+        {
+            get
+            {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+
+        /// <remarks/>
+        public bool AddMonitorsResultSpecified
+        {
+            get
+            {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void DeleteMonitorsCompletedEventHandler(object sender, DeleteMonitorsCompletedEventArgs e);
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteMonitorsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    {
+
+        private object[] results;
+
+        internal DeleteMonitorsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+        {
+            this.results = results;
+        }
+
+        /// <remarks/>
+        public bool DeleteMonitorsResult
+        {
+            get
+            {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+
+        /// <remarks/>
+        public bool DeleteMonitorsResultSpecified
         {
             get
             {

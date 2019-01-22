@@ -17,7 +17,6 @@ namespace ATicket.Views.DiscoverMainPage
     {
         NotePadViewModel viewModel;
         private NotePadDataAccess dataAccess;
-        //private NotePadDataAccess dataAccess;
         public NotePadPage()
         {
             InitializeComponent();
@@ -26,10 +25,7 @@ namespace ATicket.Views.DiscoverMainPage
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
-            //if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
-            
+            viewModel.LoadItemsCommand.Execute(null);
         }
         async void Add_Clicked(object sender, EventArgs e)
         {

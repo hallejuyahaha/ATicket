@@ -21,6 +21,7 @@
         <Button Text="记事本" Grid.Row="1" Grid.Column="0" Image="@image/notepad.png"  Clicked="ShowNotepadPage"></Button>
         <Button Text="计算器" Grid.Row="1" Grid.Column="1"  Clicked="ShowCalculatorPage"></Button>
         <Button Text="计算日期差" Grid.Row="1" Grid.Column="2"  Clicked="DateDValue"></Button>
-
+        <Button Text="我的监控歌手" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"  Clicked="Monitor"></Button>
+        
     </Grid>
 </ContentPage>

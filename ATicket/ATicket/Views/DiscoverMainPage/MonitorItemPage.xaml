@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ATicket.Views.DiscoverMainPage.MonitorItemPage"
+             Title="添加歌手">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="歌手名" FontSize="Medium" />
+            <Entry Placeholder="请填写想要监控的歌手" x:Name="actorName" FontSize="Large" />
+           
+
+            <!--<DatePicker x:Name="DatePicker" Date="{Binding Time}"
+                    Format="D"
+                    Margin="30, 0, 0, 30" />-->
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
