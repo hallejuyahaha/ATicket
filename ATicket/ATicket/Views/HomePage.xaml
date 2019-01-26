@@ -41,13 +41,17 @@
                                 <ColumnDefinition Width="150" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
+                            <Label Text="{Binding IsNew}"
+                                   HorizontalOptions="Center"
+                                   TextColor="Red" 
+                                   Grid.Row="5" Grid.Column="0"/>
                             <Image Source="{Binding front_image_path}"
-                                           Grid.Row="0" Grid.Column="0"  Grid.RowSpan="6"/>
+                                           Grid.Row="0" Grid.Column="0"  Grid.RowSpan="5" />
                             <Label Text="{Binding showname}"
                                    HorizontalOptions="StartAndExpand"
                                    TextColor="#f35e20" 
                                    Grid.Row="0" Grid.Column="1"/>
-                            <Label Text="{Binding time}"
+                            <Label Text="{Binding startime, StringFormat= '时间：{0} '}"
                                    HorizontalOptions="Start"
                                    TextColor="#503026"
                                    Grid.Row="1" Grid.Column="1"/>

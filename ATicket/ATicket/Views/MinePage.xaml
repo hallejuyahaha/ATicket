@@ -1,12 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ATicket.Views.MinePage">
+             x:Class="ATicket.Views.MinePage"
+              Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView  x:Name="listView"
+                   RowHeight="180"
+                   ItemsSource="{Binding Items}"
+                   ItemSelected="OnItemSelected"
+                   IsPullToRefreshEnabled ="True"
+                   IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                    RefreshCommand="{Binding LoadItemsCommand}">
+
+            <ListView.Header>
+                以下未开始的演出中，
+                可能有您感兴趣的歌手
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Margin="5" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                          
+                            <Image Source="{Binding front_image_path}"
+                                           Grid.Row="0" Grid.Column="0"  Grid.RowSpan="6" />
+                            <Label Text="{Binding showname}"
+                                   HorizontalOptions="StartAndExpand"
+                                   TextColor="#f35e20" 
+                                   Grid.Row="0" Grid.Column="1"/>
+                            <Label Text="{Binding startime, StringFormat= '时间：{0} '}"
+                                   HorizontalOptions="Start"
+                                   TextColor="#503026"
+                                   Grid.Row="1" Grid.Column="1"/>
+                            <Label Text="{Binding place}"
+                                   HorizontalOptions="Start"
+                                   TextColor="#503026"
+                                   Grid.Row="2" Grid.Column="1"/>
+                            <Label Text="{Binding type}"
+                                   HorizontalOptions="Start"
+                                   TextColor="#503026"
+                                   Grid.Row="3" Grid.Column="1"/>
+                            <Label Text="{Binding price, StringFormat= ' {0} 元' }"
+                                   FontSize="Small"
+                                   HorizontalOptions="Start"
+                                   TextColor="#503026"
+                                   Grid.Row="4" Grid.Column="1"/>
+                            <Label Text="{Binding actor}"
+                                   HorizontalOptions="Start"
+                                   TextColor="#503026"
+                                   Grid.Row="5" Grid.Column="1"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

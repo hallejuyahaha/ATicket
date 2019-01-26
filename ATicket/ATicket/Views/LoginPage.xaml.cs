@@ -32,7 +32,7 @@ namespace ATicket.Views
             else {
                 try
                 {
-                   List<ServiceReference1.showstarts> aa =  service1.GetShow().ToList();
+                   //List<ServiceReference1.showstarts> aa =  service1.GetShow().ToList();
                     service1.Login(UserName, PassWord, out LoginResult, out LoginState);
                     if (LoginResult == 1)
                     {

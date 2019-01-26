@@ -16,7 +16,7 @@ namespace ATicket.Views.DiscoverMainPage
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DateDValue : ContentPage
     {
-        DateDValueModel viewModel;
+        //DateDValueModel viewModel;
         private NotePadDataAccess dataAccess;
         public ObservableCollection<NotePadItems> ListItems;
         public DateDValue()

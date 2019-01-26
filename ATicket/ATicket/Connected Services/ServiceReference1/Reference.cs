@@ -18,6 +18,7 @@ namespace ServiceReference1
     using System.ComponentModel;
 
 
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -47,7 +48,8 @@ namespace ServiceReference1
         /// <remarks/>
         public Service1()
         {
-            this.Url = "http://192.168.1.2:8000/Service1.svc";
+            this.Url = "http://47.96.123.158:8080/ShowWCF/Service1.svc";
+            //this.Url = "http://192.168.1.2:8000/Service1.svc";
             if ((this.IsLocalFileSystemWebService(this.Url) == true))
             {
                 this.UseDefaultCredentials = true;
@@ -191,27 +193,29 @@ namespace ServiceReference1
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetShow", RequestNamespace = "http://tempuri.org/", ResponseNamespace = "http://tempuri.org/", Use = System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle = System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable = true)]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace = "http://schemas.datacontract.org/2004/07/ShowStart.Model")]
-        public showstarts[] GetShow()
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("KeyValueOfstringArrayOfshowstarts4PkOV_S9k", Namespace = "http://schemas.microsoft.com/2003/10/Serialization/Arrays", IsNullable = false)]
+        public ArrayOfKeyValueOfstringArrayOfshowstarts4PkOV_S9kKeyValueOfstringArrayOfshowstarts4PkOV_S9k[] GetShow([System.Xml.Serialization.XmlElementAttribute(IsNullable = true)] string username)
         {
-            object[] results = this.Invoke("GetShow", new object[0]);
-            return ((showstarts[])(results[0]));
+            object[] results = this.Invoke("GetShow", new object[] {
+                        username});
+            return ((ArrayOfKeyValueOfstringArrayOfshowstarts4PkOV_S9kKeyValueOfstringArrayOfshowstarts4PkOV_S9k[])(results[0]));
         }
 
         /// <remarks/>
-        public void GetShowAsync()
+        public void GetShowAsync(string username)
         {
-            this.GetShowAsync(null);
+            this.GetShowAsync(username, null);
         }
 
         /// <remarks/>
-        public void GetShowAsync(object userState)
+        public void GetShowAsync(string username, object userState)
         {
             if ((this.GetShowOperationCompleted == null))
             {
                 this.GetShowOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetShowOperationCompleted);
             }
-            this.InvokeAsync("GetShow", new object[0], this.GetShowOperationCompleted, userState);
+            this.InvokeAsync("GetShow", new object[] {
+                        username}, this.GetShowOperationCompleted, userState);
         }
 
         private void OnGetShowOperationCompleted(object arg)
@@ -772,6 +776,49 @@ namespace ServiceReference1
     }
 
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
+    public partial class ArrayOfKeyValueOfstringArrayOfshowstarts4PkOV_S9kKeyValueOfstringArrayOfshowstarts4PkOV_S9k
+    {
+
+        private string keyField;
+
+        private showstarts[] valueField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true)]
+        public string Key
+        {
+            get
+            {
+                return this.keyField;
+            }
+            set
+            {
+                this.keyField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable = true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace = "http://schemas.datacontract.org/2004/07/ShowStart.Model")]
+        public showstarts[] Value
+        {
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GetDataCompletedEventHandler(object sender, GetDataCompletedEventArgs e);
 
@@ -851,12 +898,12 @@ namespace ServiceReference1
         }
 
         /// <remarks/>
-        public showstarts[] Result
+        public ArrayOfKeyValueOfstringArrayOfshowstarts4PkOV_S9kKeyValueOfstringArrayOfshowstarts4PkOV_S9k[] Result
         {
             get
             {
                 this.RaiseExceptionIfNecessary();
-                return ((showstarts[])(this.results[0]));
+                return ((ArrayOfKeyValueOfstringArrayOfshowstarts4PkOV_S9kKeyValueOfstringArrayOfshowstarts4PkOV_S9k[])(this.results[0]));
             }
         }
     }

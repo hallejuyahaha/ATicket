@@ -23,7 +23,7 @@
                  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  CachingStrategy="RecycleElement"
                  >
-                 <!--ItemSelected="OnItemSelected"-->
+                <!--ItemSelected="OnItemSelected"-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -34,7 +34,7 @@
                                 <Label Text="{Binding actor}" 
                        LineBreakMode="NoWrap" 
                        Style="{DynamicResource ListItemTextStyle}" 
-                       FontSize="16" />
+                       FontSize="24" />
                                 <!--<Label Text="{Binding Content}" 
                        LineBreakMode="NoWrap"
                        Style="{DynamicResource ListItemDetailTextStyle}"

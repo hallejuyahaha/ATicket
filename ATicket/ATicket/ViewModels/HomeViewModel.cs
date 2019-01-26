@@ -1,5 +1,7 @@
 ﻿using ATicket.Models;
 using ATicket.Services;
+using System.Linq;
+using ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,22 +15,65 @@ namespace ATicket.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
-        private ServiceReference1.Service1 service1;       
-        public ObservableCollection<ServiceReference1.showstarts> Items { get; set; }
+        private ServiceReference1.Service1 service1;
+        public ObservableCollection<show> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
         public HomeViewModel()
         {
             Title = "ATicket";
-            Items = new ObservableCollection<ServiceReference1.showstarts>();           
+            Items = new ObservableCollection<show>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());//load item方法
 
             try
             {
                 service1 = new ServiceReference1.Service1();
-                var items = service1.GetShow();
-                foreach (var item in items)
+                var keys = service1.GetShow("admin");
+                Dictionary<string, showstarts[]> show = new Dictionary<string, showstarts[]>(); //从wcf获取showlist
+                foreach (var item in keys)
                 {
-                    Items.Add(item);
+                    show.Add(item.Key, item.Value);
+                }
+                List<showstarts> newshow = new List<showstarts>(show["newshow"]);
+                List<showstarts> oldshow = new List<showstarts>(show["oldshow"]);
+                newshow = newshow.OrderBy(_x => _x.startime).ToList();
+                oldshow = oldshow.OrderBy(_x => _x.startime).ToList();
+
+                //类型转换
+                //List<show> newShow = new List<show>();
+                foreach (showstarts s in newshow)
+                {
+                    show t = new show()
+                    {
+                        showname = s.showname,
+                        place = s.place,
+                        actor = s.actor,
+                        front_image_path = s.front_image_path,
+                        price = s.price,
+                        readtime = s.readtime,
+                        startime = s.startime,
+                        type = s.type,
+                        url = s.url,
+                        IsNew = "New"
+                    };
+                    Items.Add(t);
+                }
+                //List<show> oldShow = new List<show>();
+                foreach (showstarts s in oldshow)
+                {
+                    show t = new show()
+                    {
+                        showname = s.showname,
+                        place = s.place,
+                        actor = s.actor,
+                        front_image_path = s.front_image_path,
+                        price = s.price,
+                        readtime = s.readtime,
+                        startime = s.startime,
+                        type = s.type,
+                        url = s.url,
+                        IsNew = ""
+                    };
+                    Items.Add(t);
                 }
             }
             catch (Exception e)
@@ -38,7 +83,7 @@ namespace ATicket.ViewModels
         }
         private async Task ExecuteLoadItemsCommand()
         {
-          
+
             if (IsBusy)
                 return;
 
@@ -47,10 +92,53 @@ namespace ATicket.ViewModels
             try
             {
                 Items.Clear();
-                var items = service1.GetShow();
-                foreach (var item in items)
+                var keys = service1.GetShow("admin");
+                Dictionary<string, showstarts[]> show = new Dictionary<string, showstarts[]>(); //从wcf获取showlist
+                foreach (var item in keys)
                 {
-                    Items.Add(item);
+                    show.Add(item.Key, item.Value);
+                }
+                List<showstarts> newshow = new List<showstarts>(show["newshow"]);
+                List<showstarts> oldshow = new List<showstarts>(show["oldshow"]);
+                newshow = newshow.OrderBy(_x => _x.startime).ToList();
+                oldshow = oldshow.OrderBy(_x => _x.startime).ToList();
+
+                //类型转换
+                //List<show> newShow = new List<show>();
+                foreach (showstarts s in newshow)
+                {
+                    show t = new show()
+                    {
+                        showname = s.showname,
+                        place = s.place,
+                        actor = s.actor,
+                        front_image_path = s.front_image_path,
+                        price = s.price,
+                        readtime = s.readtime,
+                        startime = s.startime,
+                        type = s.type,
+                        url = s.url,
+                        IsNew = "New"
+                    };
+                    Items.Add(t);
+                }
+                //List<show> oldShow = new List<show>();
+                foreach (showstarts s in oldshow)
+                {
+                    show t = new show()
+                    {
+                        showname = s.showname,
+                        place = s.place,
+                        actor = s.actor,
+                        front_image_path = s.front_image_path,
+                        price = s.price,
+                        readtime = s.readtime,
+                        startime = s.startime,
+                        type = s.type,
+                        url = s.url,
+                        IsNew = ""
+                    };
+                    Items.Add(t);
                 }
             }
             catch (Exception ex)
@@ -61,6 +149,19 @@ namespace ATicket.ViewModels
             {
                 IsBusy = false;
             }
+        }
+        public class show: ServiceReference1.showstarts
+        {
+            public string IsNew { set; get; }
+            //public string actor;
+            //public string front_image_path;
+            //public string place;
+            //public System.Nullable<decimal> price;
+            //public System.Nullable<System.DateTime> readtime;
+            //public string showname;
+            //public System.Nullable<System.DateTime> startime;
+            //public string type;
+            //public string url;
         }
     }
 }

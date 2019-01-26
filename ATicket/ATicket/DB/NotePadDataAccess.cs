@@ -60,7 +60,7 @@ namespace ATicket.DB
             lock (collisionLock)
             {
                 var query = from aa in database.Table<NotePadItems>()
-                            where aa.Time>start && aa.Time < end
+                            where aa.Time>=start && aa.Time <= end
                             select aa;
                 return query.AsEnumerable();
             }
