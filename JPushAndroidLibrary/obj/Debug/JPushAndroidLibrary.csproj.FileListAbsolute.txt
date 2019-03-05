@@ -1,0 +1,5 @@
+F:\Ticket\JPushAndroidLibrary\bin\Debug\JPushAndroidLibrary.dll
+F:\Ticket\JPushAndroidLibrary\bin\Debug\JPushAndroidLibrary.pdb
+F:\Ticket\JPushAndroidLibrary\obj\Debug\JPushAndroidLibrary.csproj.CoreCompileInputs.cache
+F:\Ticket\JPushAndroidLibrary\obj\Debug\JPushAndroidLibrary.dll
+F:\Ticket\JPushAndroidLibrary\obj\Debug\JPushAndroidLibrary.pdb

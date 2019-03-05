@@ -36,6 +36,7 @@
     <BundleAssemblies>false</BundleAssemblies>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>x86;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -72,13 +73,16 @@
   <ItemGroup>
     <Compile Include="DataBaseConnection_Android.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="NotificationReceiver.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
@@ -106,6 +110,10 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\JPushAndroidLibrary\JPushAndroidLibrary.csproj">
+      <Project>{f489dabf-827d-41b8-9c78-7c1bc0319810}</Project>
+      <Name>JPushAndroidLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ATicket\ATicket.csproj">
       <Project>{3CE85399-56A3-482C-A358-D3E811A2BD46}</Project>
       <Name>ATicket</Name>

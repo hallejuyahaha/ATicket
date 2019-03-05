@@ -3,6 +3,8 @@ F:\Ticket\ATicket\ATicket.Android\bin\Debug\ATicket.Android.pdb
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\com.companyname.ATicket.apk
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\com.companyname.ATicket-Signed.apk
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\ATicket.dll
+F:\Ticket\ATicket\ATicket.Android\bin\Debug\JPushAndroidLibrary.dll
+F:\Ticket\ATicket\ATicket.Android\bin\Debug\JPushAndroidLibrary.pdb
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\ATicket.pdb
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\ATicket.Android.csprojAssemblyReference.cache
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\res.flag
@@ -32,6 +34,7 @@ F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\res\drawable\xamarin_l
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\R.cs.flag
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\R.txt
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\uploadflags.txt
+F:\Ticket\ATicket\ATicket.Android\bin\Debug\ClassLibrary2.pdb
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\FormsViewGroup.pdb
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\Mono.Android.pdb
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\Mono.Security.pdb
@@ -58,8 +61,10 @@ F:\Ticket\ATicket\ATicket.Android\bin\Debug\System.Xml.pdb
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\Xamarin.Forms.Core.pdb
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\Xamarin.Forms.Platform.Android.pdb
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
+F:\Ticket\ATicket\ATicket.Android\bin\Debug\ClassLibrary2.dll
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\ATicket.dll.mdb
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\FormsViewGroup.dll.mdb
+F:\Ticket\ATicket\ATicket.Android\bin\Debug\JPushAndroidLibrary.dll.mdb
 F:\Ticket\ATicket\ATicket.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\linksrc\ATicket.Android.pdb
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.pdb
@@ -86,7 +91,9 @@ F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\linksrc\System.Service
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\linksrc\System.Transactions.pdb
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\linksrc\Mono.Security.pdb
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\linksrc\ATicket.dll.mdb
+F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\linksrc\JPushAndroidLibrary.dll.mdb
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\android\assets\ATicket.dll.mdb
+F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\android\assets\JPushAndroidLibrary.dll.mdb
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\android\assets\ATicket.Android.pdb
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\android\assets\FormsViewGroup.pdb
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Android.pdb
@@ -111,5 +118,3 @@ F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\android\assets\System.
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Platform.Android.pdb
 F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
-F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\linksrc\ATicket.Android.pdb
-F:\Ticket\ATicket\ATicket.Android\obj\Debug\MonoAndroid81\linksrc\ATicket.dll.mdb

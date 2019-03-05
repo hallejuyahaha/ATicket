@@ -18,6 +18,7 @@ namespace ATicket.Views
 		{
 			InitializeComponent ();
             BindingContext = viewModel = new HomeViewModel();
+
         }
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
@@ -27,5 +28,5 @@ namespace ATicket.Views
         {
 
         }
-    }
+    } 
 }

@@ -9,9 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATicket.iOS", "ATicket\ATic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATicket.UWP", "ATicket\ATicket.UWP\ATicket.UWP.csproj", "{6B8A9D7B-B899-4EC7-A6BD-DA2B69641FC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATicket.MobileAppService", "ATicket\ATicket.MobileAppService\ATicket.MobileAppService.csproj", "{9A6C2E37-1FCC-4E56-8161-4835B1903B76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATicket.MobileAppService", "ATicket\ATicket.MobileAppService\ATicket.MobileAppService.csproj", "{9A6C2E37-1FCC-4E56-8161-4835B1903B76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATicket", "ATicket\ATicket\ATicket.csproj", "{5AB62852-F6AB-4D60-B63B-099A8C5CA483}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATicket", "ATicket\ATicket\ATicket.csproj", "{5AB62852-F6AB-4D60-B63B-099A8C5CA483}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JPushAndroidLibrary", "JPushAndroidLibrary\JPushAndroidLibrary.csproj", "{F489DABF-827D-41B8-9C78-7C1BC0319810}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -209,6 +211,30 @@ Global
 		{5AB62852-F6AB-4D60-B63B-099A8C5CA483}.Release|x86.ActiveCfg = Release|Any CPU
 		{5AB62852-F6AB-4D60-B63B-099A8C5CA483}.Release|x86.Build.0 = Release|Any CPU
 		{5AB62852-F6AB-4D60-B63B-099A8C5CA483}.Release|x86.Deploy.0 = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|ARM.Build.0 = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|x64.Build.0 = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Debug|x86.Build.0 = Debug|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|ARM.ActiveCfg = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|ARM.Build.0 = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|iPhone.Build.0 = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|x64.ActiveCfg = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|x64.Build.0 = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|x86.ActiveCfg = Release|Any CPU
+		{F489DABF-827D-41B8-9C78-7C1BC0319810}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

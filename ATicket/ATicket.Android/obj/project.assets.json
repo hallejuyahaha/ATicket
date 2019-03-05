@@ -462,6 +462,15 @@
         "runtime": {
           "bin/placeholder/ATicket.dll": {}
         }
+      },
+      "JPushAndroidLibrary/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/JPushAndroidLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JPushAndroidLibrary.dll": {}
+        }
       }
     }
   },
@@ -1192,11 +1201,17 @@
       "type": "project",
       "path": "../ATicket/ATicket.csproj",
       "msbuildProject": "../ATicket/ATicket.csproj"
+    },
+    "JPushAndroidLibrary/1.0.0": {
+      "type": "project",
+      "path": "../../JPushAndroidLibrary/JPushAndroidLibrary.csproj",
+      "msbuildProject": "../../JPushAndroidLibrary/JPushAndroidLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
       "ATicket >= 1.0.0",
+      "JPushAndroidLibrary >= 1.0.0",
       "Newtonsoft.Json >= 12.0.1",
       "Xamarin.Android.Support.Design >= 27.0.2.1",
       "Xamarin.Android.Support.v4 >= 27.0.2.1",
@@ -1236,6 +1251,9 @@
           "projectReferences": {
             "F:\\Ticket\\ATicket\\ATicket\\ATicket.csproj": {
               "projectPath": "F:\\Ticket\\ATicket\\ATicket\\ATicket.csproj"
+            },
+            "F:\\Ticket\\JPushAndroidLibrary\\JPushAndroidLibrary.csproj": {
+              "projectPath": "F:\\Ticket\\JPushAndroidLibrary\\JPushAndroidLibrary.csproj"
             }
           }
         }

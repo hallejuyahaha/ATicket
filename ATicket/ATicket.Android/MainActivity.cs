@@ -1,11 +1,12 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
+using CN.Jpush.Android.Api;
 
 namespace ATicket.Droid
 {
@@ -16,14 +17,37 @@ namespace ATicket.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
 
-            //webhost.Service1 service1 = new webhost.Service1();
-            //var at = service1.GetShow();
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+
+
+            //JPushInterface.SetDebugMode(true);
+            //JPushInterface.Init(this);
+            try
+            {
+                initPushNotification();
+
+                global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+                LoadApplication(new App());
+            }
+            catch (Exception e) {  }
+
+
+        }
+        private void initPushNotification()
+        {
+            IntentFilter filter = new IntentFilter();
+            filter.AddAction(JPushInterface.ActionNotificationOpened);
+            filter.AddAction(JPushInterface.ActionNotificationReceived);
+            filter.AddAction(JPushInterface.ActionMessageReceived);
+            filter.AddAction(JPushInterface.ActionRegistrationId);
+            filter.AddAction(JPushInterface.ActionConnectionChange);
+            NotificationReceiver receiver = new NotificationReceiver();
+            RegisterReceiver(receiver, filter);
+            JPushInterface.SetDebugMode(true);
+            JPushInterface.Init(this.ApplicationContext);
         }
     }
 }

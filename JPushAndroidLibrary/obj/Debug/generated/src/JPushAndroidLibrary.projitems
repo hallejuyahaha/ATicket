@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25;ANDROID_26;ANDROID_27</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.BaseLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.IJAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.IJAnalyticsAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.JActionExtra.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.JCoreInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.JProtocol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.JRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.JResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.MultiSpHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.SdkType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.Utils.ByteBufferUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.Utils.OutputDataUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Api.Utils.ProtocolUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Net.DefaultHostVerifier.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Net.HttpConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Net.HttpRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Net.HttpResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Net.HttpUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Net.SSLTrustManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jiguang.Service.Protocol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.BasicPushNotificationBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.CustomPushNotificationBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.DefaultPushNotificationBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.InstrumentedActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.InstrumentedListActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.IPushNotificationBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.ITagAliasCallback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.JPushInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.JPushMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.JThirdPlatFormInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.MultiActionsNotificationBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Api.ThirdLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Data.JPushLocalNotification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Data.JPushView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.AlarmReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.DActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.DaemonService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.DataProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.DownloadActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.DownloadProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.JPushMessageReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.PushReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.PushService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.ServiceInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.TagAliasReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.Service.WakedResultReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.UI.FullScreenView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.UI.PopWinActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\CN.Jpush.Android.UI.PushActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>
