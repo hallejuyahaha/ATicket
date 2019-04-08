@@ -607,3 +607,6 @@ F:\Ticket\ATicket\ATicket.UWP\obj\x86\Debug\qualifiers.txt.intermediate
 F:\Ticket\ATicket\ATicket.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 F:\Ticket\ATicket\ATicket.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 F:\Ticket\ATicket\ATicket.UWP\obj\x86\Debug\ProjectArchitectures.txt
+F:\Ticket\ATicket\ATicket.UWP\bin\x86\Debug\System.Web.Services.dll
+F:\Ticket\ATicket\ATicket.UWP\bin\x86\Debug\System.Web.Services.pdb
+F:\Ticket\ATicket\ATicket.UWP\bin\x86\Debug\System.Web.Services.xml

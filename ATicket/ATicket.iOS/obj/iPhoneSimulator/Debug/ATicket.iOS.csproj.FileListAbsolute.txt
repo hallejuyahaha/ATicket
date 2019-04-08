@@ -120,3 +120,6 @@ F:\Ticket\ATicket\ATicket.iOS\bin\iPhoneSimulator\Debug\ATicket.dll
 F:\Ticket\ATicket\ATicket.iOS\bin\iPhoneSimulator\Debug\ATicket.pdb
 F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\XamlC.stamp
 F:\Ticket\ATicket\ATicket.iOS\obj\iPhoneSimulator\Debug\ATicket.iOS.csproj.CopyComplete
+F:\Ticket\ATicket\ATicket.iOS\bin\iPhoneSimulator\Debug\System.Web.Services.dll
+F:\Ticket\ATicket\ATicket.iOS\bin\iPhoneSimulator\Debug\System.Web.Services.pdb
+F:\Ticket\ATicket\ATicket.iOS\bin\iPhoneSimulator\Debug\System.Web.Services.xml
