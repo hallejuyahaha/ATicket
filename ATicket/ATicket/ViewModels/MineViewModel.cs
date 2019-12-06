@@ -1,4 +1,6 @@
-﻿using ServiceReference1;
+﻿
+using ATicket.Module;
+using ATicket.RestApiClent;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,49 +14,39 @@ namespace ATicket.ViewModels
 {
     public class MineViewModel : BaseViewModel
     {
-        private ServiceReference1.Service1 service1;
-        public ObservableCollection<showstarts> Items { get; set; }
+        public ObservableCollection<Showstarts> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
         public MineViewModel()
         {
             Title = "我的";
-            Items = new ObservableCollection<showstarts>();
+            Items = new ObservableCollection<Showstarts>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());//load item方法
 
             try
             {
-                service1 = new ServiceReference1.Service1();
-                var keys = service1.GetShow("admin");
-                Dictionary<string, showstarts[]> show = new Dictionary<string, showstarts[]>(); //从wcf获取showlist
-                foreach (var item in keys)
-                {
-                    show.Add(item.Key, item.Value);
-                }
-                //List<showstarts> newshow = new List<showstarts>(show["newshow"]);
-                //List<showstarts> oldshow = new List<showstarts>(show["oldshow"]);
-                List<showstarts> allShow = new List<showstarts>(show["newshow"]).Union(new List<showstarts>(show["oldshow"])).ToList();
-                List<monitor> monitors = new List<monitor>(service1.GetMonitors("admin"));
+                List<Monitor> monitors = RestHelper.GetMonitor("admin");
+                Dictionary<string, List<Showstarts>> show = RestHelper.GetShow();
+                List<Showstarts> allShow = show["newShow"].Union(show["oldShow"]).ToList();
+
 
                 var q = from mo in monitors
-                        join sh in allShow on 
-                        mo.actor equals sh.actor
-                        //into temp
-                        //from tt in temp.DefaultIfEmpty()
-                        select new showstarts
+                        join sh in allShow on
+                        mo.Actor equals sh.Actor
+                        select new Showstarts
                         {
-                            actor = sh.actor,
-                            front_image_path = sh.front_image_path,
-                            place = sh.place,
-                            price = sh.price,
-                            readtime = sh.readtime,
-                            showname = sh.showname,
-                            startime = sh.startime,
-                            type = sh.type,
-                            url = sh.url
+                            Actor = sh.Actor,
+                            FrontImagePath = sh.FrontImagePath,
+                            Place = sh.Place,
+                            Price = sh.Price,
+                            Readtime = sh.Readtime,
+                            Showname = sh.Showname,
+                            Startime = sh.Startime,
+                            Type = sh.Type,
+                            Url = sh.Url
                         };
-                List<showstarts> aa = q.ToList();
+                List<Showstarts> aa = q.ToList();
 
-                foreach (showstarts s in aa)
+                foreach (Showstarts s in aa)
                 {
                     Items.Add(s);
                 }
@@ -74,38 +66,29 @@ namespace ATicket.ViewModels
             try
             {
                 Items.Clear();
-                service1 = new ServiceReference1.Service1();
-                var keys = service1.GetShow("admin");
-                Dictionary<string, showstarts[]> show = new Dictionary<string, showstarts[]>(); //从wcf获取showlist
-                foreach (var item in keys)
-                {
-                    show.Add(item.Key, item.Value);
-                }
-                //List<showstarts> newshow = new List<showstarts>(show["newshow"]);
-                //List<showstarts> oldshow = new List<showstarts>(show["oldshow"]);
-                List<showstarts> allShow = new List<showstarts>(show["newshow"]).Union(new List<showstarts>(show["oldshow"])).ToList();
-                List<monitor> monitors = new List<monitor>(service1.GetMonitors("admin"));
+                List<Monitor> monitors = RestHelper.GetMonitor("admin");
+                Dictionary<string, List<Showstarts>> show = RestHelper.GetShow();
+                List<Showstarts> allShow = show["newShow"].Union(show["oldShow"]).ToList();
+
 
                 var q = from mo in monitors
                         join sh in allShow on
-                        mo.actor equals sh.actor
-                        //into temp
-                        //from tt in temp.DefaultIfEmpty()
-                        select new showstarts
+                        mo.Actor equals sh.Actor
+                        select new Showstarts
                         {
-                            actor = sh.actor,
-                            front_image_path = sh.front_image_path,
-                            place = sh.place,
-                            price = sh.price,
-                            readtime = sh.readtime,
-                            showname = sh.showname,
-                            startime = sh.startime,
-                            type = sh.type,
-                            url = sh.url
+                            Actor = sh.Actor,
+                            FrontImagePath = sh.FrontImagePath,
+                            Place = sh.Place,
+                            Price = sh.Price,
+                            Readtime = sh.Readtime,
+                            Showname = sh.Showname,
+                            Startime = sh.Startime,
+                            Type = sh.Type,
+                            Url = sh.Url
                         };
-                List<showstarts> aa = q.ToList();
+                List<Showstarts> aa = q.ToList();
 
-                foreach (showstarts s in aa)
+                foreach (Showstarts s in aa)
                 {
                     Items.Add(s);
                 }

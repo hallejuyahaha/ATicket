@@ -3,7 +3,6 @@ F:\Project\ATicket\ATicket\ATicket\bin\Debug\netstandard2.0\ATicket.dll
 F:\Project\ATicket\ATicket\ATicket\bin\Debug\netstandard2.0\ATicket.pdb
 F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\App.xaml.g.cs
 F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
-F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\ATicket.csproj.CoreCompileInputs.cache
 F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\ATicket.AssemblyInfoInputs.cache
 F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\ATicket.AssemblyInfo.cs
 F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\ATicket.dll
@@ -19,7 +18,6 @@ F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\Views\DiscoverMainPa
 F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\Views\DiscoverMainPage\DateDValue.xaml.g.cs
 F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\Views\DiscoverMainPage\NotePadPage.xaml.g.cs
 F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\Views\DiscoverMainPage\NewNotePadItem.xaml.g.cs
-F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\ATicket.csprojAssemblyReference.cache
 F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\XamlC.stamp
 F:\Ticket\ATicket\ATicket\bin\Debug\netstandard2.0\ATicket.deps.json
 F:\Ticket\ATicket\ATicket\bin\Debug\netstandard2.0\ATicket.dll
@@ -56,3 +54,7 @@ F:\Ticket\ATicket\ATicket\obj\Debug\netstandard2.0\XamlC.stamp
 F:\Ticket\ATicket\ATicket\obj\Debug\netstandard2.0\ATicket.csproj.CopyComplete
 F:\Ticket\ATicket\ATicket\obj\Debug\netstandard2.0\ATicket.dll
 F:\Ticket\ATicket\ATicket\obj\Debug\netstandard2.0\ATicket.pdb
+F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\Views\DiscoverMainPage\MonitorItemPage.xaml.g.cs
+F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\Views\DiscoverMainPage\MonitorPage.xaml.g.cs
+F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\Views\View1.xaml.g.cs
+F:\Project\ATicket\ATicket\ATicket\obj\Debug\netstandard2.0\ATicket.csprojAssemblyReference.cache

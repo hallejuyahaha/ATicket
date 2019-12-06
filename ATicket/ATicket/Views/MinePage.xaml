@@ -33,30 +33,30 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                           
-                            <Image Source="{Binding front_image_path}"
+                            <Image Source="{Binding FrontImagePath}"
                                            Grid.Row="0" Grid.Column="0"  Grid.RowSpan="6" />
-                            <Label Text="{Binding showname}"
+                            <Label Text="{Binding Showname}"
                                    HorizontalOptions="StartAndExpand"
                                    TextColor="#f35e20" 
                                    Grid.Row="0" Grid.Column="1"/>
-                            <Label Text="{Binding startime, StringFormat= '时间：{0} '}"
+                            <Label Text="{Binding Startime, StringFormat= '时间：{0} '}"
                                    HorizontalOptions="Start"
                                    TextColor="#503026"
                                    Grid.Row="1" Grid.Column="1"/>
-                            <Label Text="{Binding place}"
+                            <Label Text="{Binding Place}"
                                    HorizontalOptions="Start"
                                    TextColor="#503026"
                                    Grid.Row="2" Grid.Column="1"/>
-                            <Label Text="{Binding type}"
+                            <Label Text="{Binding Type}"
                                    HorizontalOptions="Start"
                                    TextColor="#503026"
                                    Grid.Row="3" Grid.Column="1"/>
-                            <Label Text="{Binding price, StringFormat= ' {0} 元' }"
+                            <Label Text="{Binding Price, StringFormat= ' {0} 元' }"
                                    FontSize="Small"
                                    HorizontalOptions="Start"
                                    TextColor="#503026"
                                    Grid.Row="4" Grid.Column="1"/>
-                            <Label Text="{Binding actor}"
+                            <Label Text="{Binding Actor}"
                                    HorizontalOptions="Start"
                                    TextColor="#503026"
                                    Grid.Row="5" Grid.Column="1"/>

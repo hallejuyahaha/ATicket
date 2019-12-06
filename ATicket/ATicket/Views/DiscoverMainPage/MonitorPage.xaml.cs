@@ -1,4 +1,6 @@
-﻿using ATicket.ViewModels;
+﻿using ATicket.Module;
+using ATicket.RestApiClent;
+using ATicket.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,7 +17,6 @@ namespace ATicket.Views.DiscoverMainPage
 	public partial class MonitorPage : ContentPage
 	{
         MonitorViewModel viewModel;
-        private ServiceReference1.Service1 service1;
         public MonitorPage ()
 		{
 			InitializeComponent ();
@@ -34,7 +35,7 @@ namespace ATicket.Views.DiscoverMainPage
         private async void OnDelete(object sender, EventArgs e)
         {
             var mi = ((MenuItem)sender);
-            var item = mi.CommandParameter as ServiceReference1.monitor;
+            var item = mi.CommandParameter as Monitor;
 
             if (item == null)
             { return; }
@@ -45,10 +46,7 @@ namespace ATicket.Views.DiscoverMainPage
                 {
                     try
                     {
-                        bool Result;
-                        bool ResultS;
-                        service1 = new ServiceReference1.Service1();
-                        service1.DeleteMonitors(item, out Result, out ResultS);
+                        bool Result= RestHelper.DeleteMonitor(item);
                         if (Result)
                         {
                             //成功

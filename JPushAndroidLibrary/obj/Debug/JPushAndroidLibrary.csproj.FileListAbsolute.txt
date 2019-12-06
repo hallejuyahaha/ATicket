@@ -4,3 +4,8 @@ F:\Ticket\JPushAndroidLibrary\obj\Debug\JPushAndroidLibrary.csprojAssemblyRefere
 F:\Ticket\JPushAndroidLibrary\obj\Debug\JPushAndroidLibrary.csproj.CoreCompileInputs.cache
 F:\Ticket\JPushAndroidLibrary\obj\Debug\JPushAndroidLibrary.dll
 F:\Ticket\JPushAndroidLibrary\obj\Debug\JPushAndroidLibrary.pdb
+F:\Project\ATicket\JPushAndroidLibrary\bin\Debug\JPushAndroidLibrary.dll
+F:\Project\ATicket\JPushAndroidLibrary\bin\Debug\JPushAndroidLibrary.pdb
+F:\Project\ATicket\JPushAndroidLibrary\obj\Debug\JPushAndroidLibrary.csprojAssemblyReference.cache
+F:\Project\ATicket\JPushAndroidLibrary\obj\Debug\JPushAndroidLibrary.dll
+F:\Project\ATicket\JPushAndroidLibrary\obj\Debug\JPushAndroidLibrary.pdb

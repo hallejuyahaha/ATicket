@@ -31,7 +31,7 @@
                                 <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="删除"/>
                             </ViewCell.ContextActions>
                             <StackLayout Padding="10">
-                                <Label Text="{Binding actor}" 
+                                <Label Text="{Binding Actor}" 
                        LineBreakMode="NoWrap" 
                        Style="{DynamicResource ListItemTextStyle}" 
                        FontSize="24" />

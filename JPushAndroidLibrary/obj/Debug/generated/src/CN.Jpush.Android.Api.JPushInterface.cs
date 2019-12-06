@@ -672,6 +672,7 @@ namespace CN.Jpush.Android.Api {
 
 		static Delegate cb_setAliasAndTags_Landroid_content_Context_Ljava_lang_String_Ljava_util_Set_;
 #pragma warning disable 0169
+		[Obsolete]
 		static Delegate GetSetAliasAndTags_Landroid_content_Context_Ljava_lang_String_Ljava_util_Set_Handler ()
 		{
 			if (cb_setAliasAndTags_Landroid_content_Context_Ljava_lang_String_Ljava_util_Set_ == null)
@@ -679,6 +680,7 @@ namespace CN.Jpush.Android.Api {
 			return cb_setAliasAndTags_Landroid_content_Context_Ljava_lang_String_Ljava_util_Set_;
 		}
 
+		[Obsolete]
 		static void n_SetAliasAndTags_Landroid_content_Context_Ljava_lang_String_Ljava_util_Set_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1, IntPtr native_p2)
 		{
 			global::CN.Jpush.Android.Api.JPushInterface __this = global::Java.Lang.Object.GetObject<global::CN.Jpush.Android.Api.JPushInterface> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);

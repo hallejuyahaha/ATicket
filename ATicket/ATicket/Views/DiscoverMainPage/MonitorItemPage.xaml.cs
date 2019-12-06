@@ -1,10 +1,12 @@
 ﻿using ATicket.Models;
+using ATicket.Module;
+using ATicket.RestApiClent;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,7 +16,6 @@ namespace ATicket.Views.DiscoverMainPage
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MonitorItemPage : ContentPage
     {
-        private ServiceReference1.Service1 service1;
         public MonitorItemPage()
         {
             InitializeComponent();
@@ -28,18 +29,14 @@ namespace ATicket.Views.DiscoverMainPage
             }
             else
             {
-                ServiceReference1.monitor item = new ServiceReference1.monitor()
+                Monitor item = new Monitor()
                 {
-                    id = 1,
-                    actor = actorName.Text.Trim(),
-                    username = "admin"
+                    Actor = actorName.Text.Trim(),
+                    Username = "admin"
                 };
                 try
                 {
-                    bool Result;
-                    bool ResultS;
-                    service1 = new ServiceReference1.Service1();
-                    service1.AddMonitors(item, out Result, out ResultS);
+                    bool Result = RestHelper.AddMonitor(item);
                     if (Result)
                     {
                         await Navigation.PopModalAsync(); //推出 退出本页
